@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-const getFile = fileName => JSON.parse(fs.readFileSync(fileName, 'utf8'));
+const getFile = fileName => JSON.parse(fs.readFileSync(`${__dirname}/${fileName}`, 'utf8'));
 
 const plays = getFile('plays.json');
 const invoices = getFile('invoices.json');
